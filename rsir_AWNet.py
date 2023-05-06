@@ -64,7 +64,7 @@ def get_config():
         "train_path": '/home/sdb/txq/rsir_AWNet/dataset/UCMD/nosiy_train_0.2.csv',
         "val_path": '/home/sdb/txq/rsir_AWNet/dataset/UCMD/nosiy_val_0.2.csv',
         "test_path": '/home/sdb/txq/rsir_AWNet/dataset/UCMD/test.csv',
-        'database_path': '/home/sdb/txq/rsir_AWNet/dataset/UCMD/database.csv',
+        "database_path": '/home/sdb/txq/rsir_AWNet/dataset/UCMD/database.csv',
         "save_path": "/home/sdb/txq/rsir_AWNet/multi_loss_NWPU_128_0.2/A-NCE&MAE/symmexc_0.2/",
         "epoch": 20,
         "test_map": 1,
