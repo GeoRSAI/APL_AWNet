@@ -22,7 +22,7 @@ def to_var(x, requires_grad=True):
     return Variable(x, requires_grad=requires_grad)
 
 class AWModule(nn.Module):
-    # adopted from: Adrien Ecoffet https://github.com/AdrienLE
+
     def params(self):
         for name, param in self.named_params(self):
             yield param
@@ -113,7 +113,7 @@ class MetaLinear(AWModule):
 
     def named_leaves(self):
         return [('weight', self.weight), ('bias', self.bias)]
-#一层
+
 class AWNet(AWModule):
     def __init__(self, input, hidden1, output):
         super(AWNet, self).__init__()
@@ -127,53 +127,3 @@ class AWNet(AWModule):
         out = self.linear2(x)
         return F.sigmoid(out)
         return out
-
-# 两层
-# class AWNet(AWModule):
-#     def __init__(self, input, hidden1, hidden2, output):
-#     # def __init__(self, input, hidden1, hidden2, hidden3, output):
-#         super(AWNet, self).__init__()
-#         self.linear1 = MetaLinear(input, hidden1)
-#         self.relu1 = nn.ReLU(inplace=True)
-#         self.linear2 = MetaLinear(hidden1, hidden2)
-#         # self.dropout = nn.Dropout(p=0.1)
-#         self.relu2 = nn.ReLU(inplace=True)
-#         self.linear3 = MetaLinear(hidden2, output)
-#         # self.linear4 = MetaLinear(hidden3, output)
-#
-#     def forward(self, x):
-#         x = self.linear1(x)
-#         # x = self.dropout(x)
-#         x = self.relu1(x)
-#
-#         # out = self.linear2(x)
-#
-#         x = self.linear2(x)
-#         # x = self.sigmoid1(x)
-#         # x = self.linear3(x)
-#         x = self.relu2(x)
-#         out = self.linear3(x)
-#         return F.sigmoid(out)
-
-#三层
-# class AWNet(AWModule):
-#     def __init__(self, input, hidden1, hidden2, hidden3, output):
-#         super(AWNet, self).__init__()
-#         self.linear1 = MetaLinear(input, hidden1)
-#         self.relu1 = nn.ReLU(inplace=True)
-#         self.linear2 = MetaLinear(hidden1, hidden2)
-#         # self.dropout = nn.Dropout(p=0.1)
-#         self.sigmoid1 = nn.Sigmoid()
-#         self.linear3 = MetaLinear(hidden2, hidden3)
-#         self.linear4 = MetaLinear(hidden3, output)
-#
-#     def forward(self, x):
-#         x = self.linear1(x)
-#         # x = self.dropout(x)
-#         x = self.relu1(x)
-#         x = self.linear2(x)
-#         x = self.sigmoid1(x)
-#         x = self.linear3(x)
-#         x = self.sigmoid1(x)
-#         out = self.linear4(x)
-#         return out
