@@ -1,6 +1,5 @@
 # AWNet
-This repository is the implementation of AWNet for automatically weighting combined robust losses.
-
+This repository is the implementation of AWNet for adaptive weighted active passive Loss.
 
 
 ## Data Preparing
