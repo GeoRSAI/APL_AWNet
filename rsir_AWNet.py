@@ -128,7 +128,7 @@ def train_val(config, criterion):
                         entropy = entropy.cpu().detach().numpy()
                         entropy_list.append(entropy.tolist())
 
-                        entropy_d_var = entropy/var                          #EDS
+                        entropy_d_var = entropy/var                          #RES
                         entropy_d_var_list.append(entropy_d_var)
 
                     w_v = list(zip(entropy_d_var_list,weight))
