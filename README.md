@@ -1,6 +1,5 @@
 # AWNet
-This repository is the implementation of AWNet for adaptive weighted active passive Loss.
-
+This repository is the implementation of AWNet for adaptive weighted active passive Loss. The paper "An Adaptive Weighted Method for Remote Sensing Image Retrieval with Noisy Labels" is in  https://doi.org/10.3390/app14051756.
 
 ## Data Preparing
 Download dataset from the following links:
@@ -22,6 +21,8 @@ The pipeline for training with AWNet is the following:
 
 -  `python rsir_AWNet.py`
 
-
 ## Contact
 Please contact houdongyang1986@163.com if you have any question on the codes.
+
+## Citation
+Tian, X.; Hou, D.; Wang, S.; Liu, X.; Xing, H. An Adaptive Weighted Method for Remote Sensing Image Retrieval with Noisy Labels. Appl. Sci. 2024, 14, 1756. https://doi.org/10.3390/app14051756
