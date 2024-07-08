@@ -124,7 +124,7 @@ def train_val(config, criterion):
                         var = m.sqrt(np.var(output_ls[i]))     # S
                         var_list.append(var)
 
-                        entropy = -1.0*torch.sum(torch.tensor(output_np[i]*np.log(output_np[i])+output_np[i]))   # Entropy
+                        entropy = -1.0*torch.sum(torch.tensor(output_np[i]*np.log(output_np[i])))   # Entropy
                         entropy = entropy.cpu().detach().numpy()
                         entropy_list.append(entropy.tolist())
 
