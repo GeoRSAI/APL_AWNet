@@ -3,12 +3,14 @@ This repository is the implementation of AWNet for adaptive weighted active pass
 
 ## Data Preparing
 Download dataset from the following links:
-UCMD:[BaiduYun](https://pan.baidu.com/s/1JNkCT1KXQ7vtu49-tDaQFQ)
+- UCMD:[BaiduYun](https://pan.baidu.com/s/1JNkCT1KXQ7vtu49-tDaQFQ)
 (Code: 2wah)
-NWPU:[BaiduYun](https://pan.baidu.com/s/1I4EIzyXCSRqGZ7RQI8huuQ)
+- NWPU:[BaiduYun](https://pan.baidu.com/s/1I4EIzyXCSRqGZ7RQI8huuQ)
 (Code: ep5k)
-AID:[BaiduYun](https://pan.baidu.com/s/1II66-ChOuqFvXe0VCfsELQ)
+- AID:[BaiduYun](https://pan.baidu.com/s/1II66-ChOuqFvXe0VCfsELQ)
 (Code: pqff)
+
+The data index file (.csv) with different proportions of manual noisy labels added is located in "..\dataset\".
 
 ## Training and Evaluating
 The pipeline for training with AWNet is the following:
